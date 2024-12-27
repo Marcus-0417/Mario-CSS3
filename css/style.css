@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* 整份使用不需加as */
+/* 局部調用才需要加as */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap");
 /* 輔助色調 */
 /* 清除預設值 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
@@ -75,8 +78,11 @@ a {
     background-color: #012054;
 } */
 /* reset end */
-/* 整份使用不需加as */
-/* 局部調用才需要加as */
+body {
+  font-family: "Catamaran", serif, "Noto Sans TC", serif;
+  color: #fff6f6;
+}
+
 #topbar {
   position: fixed;
   top: 0;
@@ -84,11 +90,30 @@ a {
 }
 
 #banner {
+  display: flex;
   height: 100vh;
   background-image: url(../images/bg-pattern-logos.png), linear-gradient(#e70112 16%, #b20722 76%);
 }
-#banner #content h1 {
-  font-size: 3rem;
+#banner > div {
+  flex: 1;
+}
+#banner .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+#banner .content h1 {
+  font-weight: 800;
+  font-size: 11rem;
+  line-height: 1;
+}
+#banner .content h1 span {
+  display: block;
+  font-size: 1.8rem;
+}
+#banner .content p {
+  font-size: 1.2rem;
 }
 
 footer {

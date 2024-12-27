@@ -1,5 +1,11 @@
 @use "reset"; /* 整份使用不需加as */
 @use "variables" as *; /* 局部調用才需要加as */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body{
+    font-family: $font-en, $font-zh;
+    color: $light-red;
+}
 
 #topbar {
     position: fixed;
@@ -8,13 +14,31 @@
 }
 
 #banner{
+    display: flex;
     height: 100vh;
     background-image: url(../images/bg-pattern-logos.png),
     linear-gradient($primary-color 16%, $secondary-1 76%);
 
-    #content{
+    > div{
+        flex: 1;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10%;
+
         h1{
-            font-size: 3rem;
+            font-weight: $font-weight-ExtraBold;
+            font-size: $font-size-ex;
+            line-height: 1;
+            span{
+                display: block;
+                font-size: $font-size-xxl;
+            }
+        }
+        p{
+            font-size: $font-size-l;
         }
     }
 }

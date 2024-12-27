@@ -6,11 +6,20 @@ $font-size-l: 1.2rem;
 $font-size-xl: 1.4rem;
 $font-size-xxl: 1.8rem;
 $font-size-xxxl: 2rem;
+$font-size-xxxxl: 2.5rem;
+$font-size-xxxxxl: 3rem;
+$font-size-xxxxxxl: 4rem;
+$font-size-ex: 11rem;
 
 //字重
 $font-weight-thin: 100;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$font-weight-Bold: 700;
+$font-weight-ExtraBold: 800;
+$font-weight-Black: 900;
+
+//字體
+$font-en: 'Catamaran', serif;
+$font-zh: 'Noto Sans TC', serif;
